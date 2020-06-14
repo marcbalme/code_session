@@ -1,0 +1,17 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  background: $white;
+  border-radius: $global-radius;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  box-shadow: $global-block-shadow;
+  &-header {
+    background-color: $primary-color;
+    border-radius: $global-radius $global-radius 0 0;
+  }
+  &-container {
+    padding: rem-calc(40);
+  }
+}

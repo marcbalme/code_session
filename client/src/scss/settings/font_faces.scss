@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'FiraSans';
+  src: url('../../static/fonts/FiraSans-Regular.eot'); /* IE9 Compat Modes */
+  src: url('../../static/fonts/FiraSans-Regular.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('../../static/fonts/FiraSans-Regular.svg') format('svg'),
+    /* Legacy iOS */ url('../../static/fonts/FiraSans-Regular.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */ url('../../static/fonts/FiraSans-Regular.woff')
+      format('woff'),
+    /* Modern Browsers */ url('../../static/fonts/FiraSans-Regular.woff2')
+      format('woff2'); /* Modern Browsers */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FiraSans';
+  src: url('../../static/fonts/FiraSans-Bold.eot'); /* IE9 Compat Modes */
+  src: url('../../static/fonts/FiraSans-Bold.eot?#iefix')
+      format('embedded-opentype'),
+    /* IE6-IE8 */ url('../../static/fonts/FiraSans-Bold.svg') format('svg'),
+    /* Legacy iOS */ url('../../static/fonts/FiraSans-Bold.ttf')
+      format('truetype'),
+    /* Safari, Android, iOS */ url('../../static/fonts/FiraSans-Bold.woff')
+      format('woff'),
+    /* Modern Browsers */ url('../../static/fonts/FiraSans-Bold.woff2')
+      format('woff2'); /* Modern Browsers */
+  font-weight: bold;
+  font-style: normal;
+}

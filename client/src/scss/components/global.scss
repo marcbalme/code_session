@@ -1,0 +1,36 @@
+body {
+  height: 100%;
+  background-color: $body-background;
+  font-family: $body-font-family;
+  font-weight: normal;
+  margin: 0;
+  font-size: $medium-font;
+}
+
+li {
+  list-style: none;
+}
+.App-content {
+  padding: 0 rem-calc(30) 0 rem-calc(30);
+}
+
+h3 {
+  color: $white;
+  display: flex;
+  font-size: rem-calc(20);
+  margin: rem-calc(10) rem-calc(10) rem-calc(10) rem-calc(40);
+  font-weight: bold;
+}
+
+input {
+  margin-top: rem-calc(10);
+  height: $global-height-input;
+  border-radius: $global-radius;
+  width: 100%;
+  border: 1px solid $primaty-color;
+}
+
+.row {
+  margin: 0;
+  max-width: 100%;
+}
