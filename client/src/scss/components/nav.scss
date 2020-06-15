@@ -1,7 +1,6 @@
 .nav {
   &-container {
     width: 100%;
-    // border-bottom: rem-calc(2) solid $black;
     box-shadow: 0px 2px 10px $black;
     z-index: 1;
     display: flex;
@@ -13,7 +12,7 @@
     background: $white;
     height: auto;
     @include breakpoint(medium) {
-      padding: rem-calc(20);
+      padding: rem-calc(20) rem-calc(30) rem-calc(20) rem-calc(30);
     }
     @include breakpoint(large) {
       height: rem-calc(110);

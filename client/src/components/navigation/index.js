@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import API from '../../utils/API.js';
-// import { translations } from '../translations';
+import {
+  ROUTE_LOGIN,
+  ROUTE_STUDENT,
+  ROUTE_DASHBOARD,
+} from '../../constants/index.js';
+import { nav } from '../../translations';
 
 const Nav = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -11,7 +16,7 @@ const Nav = () => {
   return (
     <div className="nav-container">
       <Link className="nav-title" to="/">
-        ALPHA
+        {nav.title}
       </Link>
       {isConnect && (
         <nav className="nav-list">
@@ -24,17 +29,17 @@ const Nav = () => {
           </div>
 
           <ul className={`collapsed ${isExpanded ? 'is-expanded' : ''}`}>
-            <NavLink activeClassName="active" to="/test">
-              <li>salut</li>
+            <NavLink activeClassName="active" to={ROUTE_DASHBOARD}>
+              <li>{nav.home}</li>
             </NavLink>
-            <NavLink activeClassName="active" to="/signin">
-              <li>Session de code</li>
+            <NavLink activeClassName="active" to={ROUTE_LOGIN}>
+              <li>{nav.test}</li>
             </NavLink>
             <NavLink activeClassName="active" to="/signup">
-              <li>Test</li>
+              <li>{nav.session}</li>
             </NavLink>
-            <NavLink activeClassName="active" to="/dashboard">
-              <li>Elèves</li>
+            <NavLink activeClassName="active" to={ROUTE_STUDENT}>
+              <li>{nav.student}</li>
             </NavLink>
           </ul>
         </nav>

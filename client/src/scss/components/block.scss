@@ -1,0 +1,22 @@
+.block {
+  display: flex;
+  flex-direction: column;
+  background: $white;
+  border-radius: $global-radius;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: $global-block-shadow;
+  &-header {
+    background-color: $primary-color;
+    border-radius: $global-radius $global-radius 0 0;
+  }
+  &-container {
+    padding: rem-calc(10);
+    @include breakpoint(medium) {
+      padding: rem-calc(20);
+    }
+    @include breakpoint(large) {
+      padding: rem-calc(40);
+    }
+  }
+}
