@@ -11,15 +11,24 @@ li {
   list-style: none;
 }
 .App-content {
-  padding: 0 rem-calc(30) 0 rem-calc(30);
+  padding: 0 rem-calc(10) 0 rem-calc(10);
+  @include breakpoint(medium) {
+    padding: 0 rem-calc(30) 0 rem-calc(30);
+  }
 }
 
 h3 {
   color: $white;
   display: flex;
   font-size: rem-calc(20);
-  margin: rem-calc(10) rem-calc(10) rem-calc(10) rem-calc(40);
+  margin: rem-calc(10) rem-calc(10) rem-calc(10) rem-calc(10);
   font-weight: bold;
+  @include breakpoint(medium) {
+    margin: rem-calc(10) rem-calc(10) rem-calc(10) rem-calc(20);
+  }
+  @include breakpoint(large) {
+    margin: rem-calc(10) rem-calc(10) rem-calc(10) rem-calc(40);
+  }
 }
 
 input {
