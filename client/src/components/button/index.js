@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Icon from '../../utils/Icon';
 
 const Button = (props) => {
   return (
@@ -8,6 +9,7 @@ const Button = (props) => {
       onClick={props.onClick}
       type={props.type}
     >
+      {props.icon ? <Icon icon={props.icon} className="button-icon" /> : ''}
       {props.label}
     </button>
   );
@@ -18,6 +20,7 @@ Button.propTypes = {
   label: PropTypes.string.isRequired,
   type: PropTypes.string,
   onClick: PropTypes.func.isRequired,
+  icon: PropTypes.string,
 };
 
 Button.defaultProps = {

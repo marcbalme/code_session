@@ -6,11 +6,20 @@
   font-weight: bold;
   margin-top: rem-calc(20);
   font-size: $medium-font;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   &.primary {
     background-color: $primaty-color;
   }
   &.secondary {
     background-color: $secondary-color;
+  }
+  &.margin-bottom {
+    margin-bottom: rem-calc(20);
+    @include breakpoint(medium) {
+      margin-bottom: rem-calc(40);
+    }
   }
   &:hover {
     cursor: pointer;
@@ -20,5 +29,8 @@
     &.secondary {
       background-color: darken($color: $secondary-color, $amount: 10%);
     }
+  }
+  &-icon {
+    margin-right: rem-calc(10);
   }
 }

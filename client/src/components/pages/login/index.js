@@ -3,6 +3,7 @@ import API from '../../../utils/API';
 import Button from '../../button';
 import Input from '../../form/input';
 import { common, login } from '../../../translations';
+import { ICON_LOGIN } from '../../../constants';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -50,8 +51,13 @@ const Login = () => {
               placeholder={login.placeholder.password}
             />
           </div>
-          <div className="column small-12">
-            <Button label="Connexion" onClick={() => send()} type="submit" />
+          <div className="column small-12 medium-4 large-3 onRight">
+            <Button
+              label={login.connect}
+              onClick={() => send()}
+              type="submit"
+              icon={ICON_LOGIN}
+            />
           </div>
         </div>
       </div>
