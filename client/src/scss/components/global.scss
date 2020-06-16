@@ -16,6 +16,19 @@ li {
     padding: 0 rem-calc(30) 0 rem-calc(30);
   }
 }
+h1 {
+  color: $primaty-color;
+  font-weight: bold;
+  margin: 0;
+  @include breakpoint(medium) {
+    margin-top: 0 0 rem-calc(20) 0;
+  }
+}
+
+h2 {
+  margin: 0;
+  color: $primaty-color;
+}
 
 h3 {
   color: $white;

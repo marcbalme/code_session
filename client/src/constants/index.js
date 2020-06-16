@@ -22,6 +22,7 @@ export const ICON_SEARCH = 'search';
 export const ICON_ADD_USER = 'user-plus';
 export const ICON_STUDENTS = 'users';
 export const ICON_SETTINGS = 'wheel';
+export const ICON_ClOSE = 'cancel-circle';
 
 //COLORS
 
