@@ -123,12 +123,9 @@
   @include breakpoint(medium down) {
     display: inline-block;
     position: fixed;
-    top: 28px;
+    top: rem-calc(20);
     right: rem-calc(20);
     cursor: pointer;
-    border: 1px solid $dark-gray;
-    border-radius: $global-radius;
-    font-size: rem-calc(20);
     padding: rem-calc(5);
   }
 }
