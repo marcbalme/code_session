@@ -32,3 +32,12 @@ export const COLOR_THIRD = '#653a66';
 export const COLOR_ERROR = '#e20025';
 export const COLOR_WARNING = '#e87401';
 export const COLOR_SUCCESS = '#2fe602';
+
+//LICENCE TYPE
+
+export const VALUE_LICENCE_B = 1;
+export const VALUE_LICENCE_AAC = 2;
+export const VALUE_LICENCE_CS = 3;
+export const LICENCE_B = 'B';
+export const LICENCE_AAC = 'AAC';
+export const LICENCE_CS = 'CS';
