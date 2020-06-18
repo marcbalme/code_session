@@ -27,7 +27,7 @@ export const ICON_ClOSE = 'cancel-circle';
 //COLORS
 
 export const COLOR_PRIMARY = '#3a3d66';
-export const COLOR_SECONDARY = '#664f3a';
+export const COLOR_SECONDARY = '#1A6DDE';
 export const COLOR_THIRD = '#653a66';
 export const COLOR_ERROR = '#e20025';
 export const COLOR_WARNING = '#e87401';
