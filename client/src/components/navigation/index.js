@@ -5,8 +5,11 @@ import {
   ROUTE_LOGIN,
   ROUTE_STUDENT,
   ROUTE_DASHBOARD,
+  ICON_MENU,
+  COLOR_PRIMARY,
 } from '../../constants/index.js';
 import { nav } from '../../translations';
+import Icon from '../../utils/Icon.js';
 
 const Nav = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -25,7 +28,7 @@ const Nav = () => {
             aria-hidden="true"
             onClick={() => setIsExpanded(!isExpanded)}
           >
-            menu
+            <Icon icon={ICON_MENU} size={50} color={COLOR_PRIMARY} />
           </div>
 
           <ul className={`collapsed ${isExpanded ? 'is-expanded' : ''}`}>

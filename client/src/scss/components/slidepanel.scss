@@ -1,0 +1,29 @@
+.slidepanel {
+  position: fixed;
+  background: $white;
+  top: rem-calc(10);
+  left: rem-calc(5);
+  right: -2px;
+  padding: rem-calc(10);
+  bottom: rem-calc(10);
+  border: 2px solid $primaty-color;
+  border-radius: $global-radius 0 0 $global-radius;
+  transform: translateX(100%);
+  transition: 0.3s ease-out;
+  &.is-open {
+    transform: translateX(0%);
+  }
+  &-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: rem-calc(10);
+    color: $primaty-color;
+    > svg {
+      margin-right: rem-calc(10);
+    }
+  }
+  &-close {
+    margin-left: auto;
+    display: flex;
+  }
+}

@@ -13,4 +13,10 @@
       font-weight: bold;
     }
   }
+  &-label {
+    width: 100%;
+    color: $primaty-color;
+    font-size: $medium-font;
+    font-weight: bold;
+  }
 }
