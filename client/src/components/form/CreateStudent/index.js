@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { student } from '../../../translations';
-import { newStudent } from '../../../api/student/request';
+import { api_newStudent } from '../../../api/student/request';
 import Input from '../input';
 import Button from '../../button';
 import InputSelect from '../inputSelect';
@@ -13,7 +13,6 @@ import {
   LICENCE_CS,
 } from '../../../constants';
 import InputDatePicker from '../inputDatePicker';
-import API from '../../../utils/API';
 
 const CreateStudent = ({ title, children }) => {
   const [name, setName] = useState('');
@@ -34,21 +33,8 @@ const CreateStudent = ({ title, children }) => {
       firstName: firstName,
       licenceType: licenceType,
     };
-    return newStudent(value);
+    return api_newStudent(value);
   };
-  // const test = async () => {
-  //   console.log(name);
-  //   try {
-  //     const { data } = await API.createStudent({
-  //       name,
-  //       firstName,
-  //       licenceType,
-  //     });
-  //     console.log(data, 'succes');
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
   return (
     <>
       <form>
@@ -112,32 +98,4 @@ const CreateStudent = ({ title, children }) => {
   );
 };
 
-// Block.propTypes = {
-//   title: PropTypes.string.isRequired,
-//   children: PropTypes.any,
-// };
-
 export default CreateStudent;
-
-// class App extends React.Component {
-//   state = {
-//     selectedOption: null,
-//   };
-//   handleChange = selectedOption => {
-//     this.setState(
-//       { selectedOption },
-//       () => console.log(`Option selected:`, this.state.selectedOption)
-//     );
-//   };
-//   render() {
-//     const { selectedOption } = this.state;
-
-//     return (
-//       <Select
-//         value={selectedOption}
-//         onChange={this.handleChange}
-//         options={options}
-//       />
-//     );
-//   }
-// }

@@ -1,21 +1,18 @@
 import React, { useState } from 'react';
-import API from '../utils/API';
+import { api_newUser } from '../api/account/request';
 
 const Signup = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [cpassword, setCPassword] = useState('');
-
-  const send = async () => {
+  const handleSubmit = () => {
+    const value = {
+      email,
+      password,
+    };
     if (!email || email.length === 0) return;
     if (!password || password.length === 0 || password !== cpassword) return;
-    try {
-      const { data } = await API.signup({ email, password });
-      localStorage.setItem('token', data.token);
-      window.location = '/dashboard';
-    } catch (error) {
-      console.error(error);
-    }
+    else return api_newUser(value);
   };
   return (
     <div className="Login">
@@ -48,7 +45,7 @@ const Signup = () => {
             type="password"
           />
         </label>
-        <button onClick={() => send()} type="submit">
+        <button onClick={() => handleSubmit()} type="submit">
           Inscription
         </button>
       </form>

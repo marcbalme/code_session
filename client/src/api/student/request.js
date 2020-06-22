@@ -1,6 +1,6 @@
 import index from './index';
 
-const newStudent = async (value) => {
+const api_newStudent = async (value) => {
   try {
     const { data } = await index.createStudent(value);
     console.log(data, 'succes');
@@ -9,4 +9,4 @@ const newStudent = async (value) => {
   }
 };
 
-export { newStudent };
+export { api_newStudent };

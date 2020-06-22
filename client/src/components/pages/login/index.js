@@ -1,26 +1,26 @@
 import React, { useState } from 'react';
-import API from '../../../utils/API';
 import Button from '../../button';
 import Input from '../../form/input';
 import { common, login } from '../../../translations';
 import { ICON_LOGIN } from '../../../constants';
+import { api_newLog } from '../../../api/account/request';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const send = async () => {
+
+  const handlSubmit = () => {
+    const value = {
+      email,
+      password,
+    };
     if (!email || email.length === 0) {
       return;
     }
     if (!password || password.length === 0) {
       return;
-    }
-    try {
-      const { data } = await API.login(email, password);
-      localStorage.setItem('token', data.token);
-      window.location = '/dashboard';
-    } catch (error) {
-      console.error(error);
+    } else {
+      return api_newLog(value);
     }
   };
 
@@ -54,7 +54,7 @@ const Login = () => {
           <div className="column small-12 medium-4 large-3 onRight">
             <Button
               label={login.connect}
-              onClick={() => send()}
+              onClick={() => handlSubmit()}
               type="submit"
               icon={ICON_LOGIN}
             />
