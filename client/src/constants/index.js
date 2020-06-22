@@ -1,3 +1,7 @@
+//BDD URL
+
+export const BDD_URL = 'http://localhost:8800';
+
 //ROUTES
 
 export const ROUTE_DASHBOARD = '/dashboard';
