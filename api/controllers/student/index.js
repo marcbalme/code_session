@@ -11,7 +11,6 @@ async function newStudent(req, res) {
     // sessionDones,
     // results,
   };
-  console.log(student);
   try {
     const new_student = new Student(student);
     await new_student.save();
