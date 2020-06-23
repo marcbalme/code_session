@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 
 //Connexion à la base de donnée
 mongoose
-  .connect('mongodb://localhost/db', {
+  .connect('mongodb://mongo/db', {
     useUnifiedTopology: true,
     useNewUrlParser: true,
     useCreateIndex: true,
