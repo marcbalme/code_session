@@ -10,6 +10,10 @@
   border-radius: $global-radius 0 0 $global-radius;
   transform: translateX(100%);
   transition: 0.3s ease-out;
+  @include breakpoint(medium) {
+    top: rem-calc(200);
+    left: 50%;
+  }
   &.is-open {
     transform: translateX(0%);
   }

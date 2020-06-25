@@ -1,0 +1,49 @@
+.react-datepicker__header {
+  background-color: $secondary-color !important;
+  border-bottom: none !important;
+}
+
+.react-datepicker__month-select {
+  width: rem-calc(60) !important;
+  background-color: $white !important;
+}
+
+.react-datepicker__year-select {
+  width: rem-calc(60) !important;
+  background-color: $white !important;
+}
+
+.react-datepicker__current-month,
+.react-datepicker-time__header,
+.react-datepicker-year-header {
+  color: $white !important;
+}
+
+.react-datepicker__day-name {
+  color: $white !important;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--in-selecting-range,
+.react-datepicker__day--in-range,
+.react-datepicker__month-text--selected,
+.react-datepicker__month-text--in-selecting-range,
+.react-datepicker__month-text--in-range,
+.react-datepicker__quarter-text--selected,
+.react-datepicker__quarter-text--in-selecting-range,
+.react-datepicker__quarter-text--in-range {
+  border-radius: $global-radius !important;
+  background-color: $secondary-color !important;
+}
+
+.react-datepicker-popper[data-placement^='bottom'] .react-datepicker__triangle,
+.react-datepicker-popper[data-placement^='bottom']
+  .react-datepicker__triangle::before {
+  border-bottom-color: $secondary-color !important;
+}
+
+.react-datepicker {
+  //   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  border: 1px solid $primaty-color !important;
+  border-radius: $global-radius !important;
+}

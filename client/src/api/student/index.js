@@ -6,7 +6,7 @@ const headers = {
 
 export default {
   createStudent: function (send) {
-    return axios.post(`${BDD_URL}/new_student`, send, {
+    return axios.post(`${BDD_URL}/student`, send, {
       headers: headers,
     });
   },

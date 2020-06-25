@@ -14,86 +14,103 @@ import {
 } from '../../../constants';
 import InputDatePicker from '../inputDatePicker';
 
-const CreateStudent = ({ title, children }) => {
+const CreateStudent = () => {
   const [name, setName] = useState('');
   const [firstName, setFirstName] = useState('');
-  const [phone, setPhone] = useState('');
   const [birthDate, setBirthDate] = useState(new Date());
   const [inscriptionDate, setInscriptionDate] = useState(new Date());
   const [licenceType, setLicenceType] = useState(null);
+  const [nameIsEmpty, setNameIsEmpty] = useState(false);
+  const [firstNameIsEmpty, setFirstNameIsEmpty] = useState(false);
+  const [licenceTypeIsEmpty, setLicenceTypeIsEmpty] = useState(false);
   const selectOptions = [
     { value: VALUE_LICENCE_B, label: LICENCE_B },
     { value: VALUE_LICENCE_AAC, label: LICENCE_AAC },
     { value: VALUE_LICENCE_CS, label: LICENCE_CS },
   ];
 
+  const testFields = () => {
+    if (!name) {
+      setNameIsEmpty(true);
+    }
+    if (!firstName) {
+      setFirstNameIsEmpty(true);
+    }
+    if (!licenceType) {
+      setLicenceType(true);
+    }
+  };
+
   const handleSubmit = () => {
-    const value = {
-      name: name,
-      firstName: firstName,
-      licenceType: licenceType,
-    };
-    return api_newStudent(value);
+    if (name && firstName && licenceType) {
+      const value = {
+        name: name,
+        firstName: firstName,
+        licenceType: licenceType,
+        birthDate: birthDate,
+        inscriptionDate: inscriptionDate,
+      };
+      return api_newStudent(value);
+    } else {
+      testFields();
+    }
   };
   return (
     <>
-      <form>
-        <div className="column small-12">
-          <Input
-            label={student.name}
-            id="studentName"
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder="hdzhud"
-          />
-        </div>
-        <div className="column small-12">
-          <Input
-            label={student.firstName}
-            id="studentFirstName"
-            type="text"
-            value={firstName}
-            onChange={(e) => setFirstName(e.target.value)}
-            placeholder="ets"
-          />
-        </div>
-        <div className="column small-12">
-          <Input
-            label={student.phoneNumber}
-            id="studentPhone"
-            type="text"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-            placeholder="0102030405"
-          />
-        </div>
-        <div className="column small-12">
-          <InputSelect
-            options={selectOptions}
-            label={student.licenceType}
-            value={licenceType}
-            setValue={setLicenceType}
-          />
-        </div>
-        <div className="column small-6">
-          <InputDatePicker
-            date={birthDate}
-            setDate={setBirthDate}
-            label={student.birthDate}
-          />
-        </div>
-        <div className="column small-6">
-          <InputDatePicker
-            date={inscriptionDate}
-            setDate={setInscriptionDate}
-            label={student.inscriptionDate}
-          />
-        </div>
-        <div className="column small-6">
-          <Button type="submit" onClick={() => handleSubmit()} label="submit" />
-        </div>
-      </form>
+      <div className="column small-12">
+        <Input
+          label={student.name}
+          id="studentName"
+          type="text"
+          value={name}
+          onChange={(e) => {
+            setNameIsEmpty(false);
+            setName(e.target.value);
+          }}
+          placeholder="Snow"
+          isEmpty={nameIsEmpty}
+        />
+      </div>
+      <div className="column small-12">
+        <Input
+          label={student.firstName}
+          id="studentFirstName"
+          type="text"
+          value={firstName}
+          onChange={(e) => {
+            setFirstNameIsEmpty(false);
+            setFirstName(e.target.value);
+          }}
+          placeholder="Jon"
+          isEmpty={firstNameIsEmpty}
+        />
+      </div>
+      <div className="column small-12">
+        <InputSelect
+          options={selectOptions}
+          label={student.licenceType}
+          value={licenceType}
+          setValue={setLicenceType}
+          isEmpty={licenceTypeIsEmpty}
+        />
+      </div>
+      <div className="column small-6">
+        <InputDatePicker
+          date={birthDate}
+          setDate={setBirthDate}
+          label={student.birthDate}
+        />
+      </div>
+      <div className="column small-6">
+        <InputDatePicker
+          date={inscriptionDate}
+          setDate={setInscriptionDate}
+          label={student.inscriptionDate}
+        />
+      </div>
+      <div className="column small-6">
+        <Button onClick={() => handleSubmit()} label="submit" />
+      </div>
     </>
   );
 };

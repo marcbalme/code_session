@@ -49,6 +49,9 @@ input {
   border-radius: $global-radius;
   width: 100%;
   border: 1px solid $primaty-color;
+  &:focus {
+    outline-color: $secondary-color;
+  }
 }
 
 .row {
