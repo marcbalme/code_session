@@ -17,7 +17,6 @@ import InputDatePicker from '../inputDatePicker';
 const CreateStudent = ({ title, children }) => {
   const [name, setName] = useState('');
   const [firstName, setFirstName] = useState('');
-  const [phone, setPhone] = useState('');
   const [birthDate, setBirthDate] = useState(new Date());
   const [inscriptionDate, setInscriptionDate] = useState(new Date());
   const [licenceType, setLicenceType] = useState(null);
@@ -32,6 +31,8 @@ const CreateStudent = ({ title, children }) => {
       name: name,
       firstName: firstName,
       licenceType: licenceType,
+      birthDate: birthDate,
+      inscriptionDate: inscriptionDate,
     };
     return api_newStudent(value);
   };
@@ -56,16 +57,6 @@ const CreateStudent = ({ title, children }) => {
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
             placeholder="ets"
-          />
-        </div>
-        <div className="column small-12">
-          <Input
-            label={student.phoneNumber}
-            id="studentPhone"
-            type="text"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-            placeholder="0102030405"
           />
         </div>
         <div className="column small-12">

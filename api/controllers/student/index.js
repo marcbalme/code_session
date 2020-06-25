@@ -5,11 +5,9 @@ async function newStudent(req, res) {
   const student = {
     name: req.body.name,
     firstName: req.body.firstName,
-    // birthDate,
-    // inscriptionDate,
+    birthDate: req.body.birthDate,
+    inscriptionDate: req.body.inscriptionDate,
     licenceType: req.body.licenceType,
-    // sessionDones,
-    // results,
   };
   try {
     const new_student = new Student(student);

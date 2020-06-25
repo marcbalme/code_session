@@ -10,6 +10,10 @@ const InputDatePicker = ({ label, date, setDate }) => {
         dateFormat="dd/MM/yyyy"
         selected={date}
         onChange={(date) => setDate(date)}
+        showYearDropdown
+        dropdownMode="select"
+        showMonthDropdown
+        useShortMonthInDropdown
       />
     </div>
   );
