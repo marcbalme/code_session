@@ -63,7 +63,10 @@ const CreateStudent = () => {
           id="studentName"
           type="text"
           value={name}
-          onChange={(e) => (setNameIsEmpty(false), setName(e.target.value))}
+          onChange={(e) => {
+            setNameIsEmpty(false);
+            setName(e.target.value);
+          }}
           placeholder="Snow"
           isEmpty={nameIsEmpty}
         />
@@ -74,9 +77,10 @@ const CreateStudent = () => {
           id="studentFirstName"
           type="text"
           value={firstName}
-          onChange={(e) => (
-            setFirstNameIsEmpty(false), setFirstName(e.target.value)
-          )}
+          onChange={(e) => {
+            setFirstNameIsEmpty(false);
+            setFirstName(e.target.value);
+          }}
           placeholder="Jon"
           isEmpty={firstNameIsEmpty}
         />

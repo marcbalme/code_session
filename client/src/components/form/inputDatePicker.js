@@ -4,7 +4,7 @@ import 'react-datepicker/dist/react-datepicker.css';
 
 const InputDatePicker = ({ label, date, setDate }) => {
   return (
-    <div>
+    <div className="form-datepicker">
       <div className="form-label">{label}</div>
       <DatePicker
         dateFormat="dd/MM/yyyy"

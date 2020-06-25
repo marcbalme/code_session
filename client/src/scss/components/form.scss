@@ -1,4 +1,11 @@
 .form {
+  &-label {
+    width: 100%;
+    color: $primaty-color;
+    font-size: $medium-font;
+    font-weight: bold;
+  }
+  //INPUT
   &-input {
     display: flex;
     width: 100%;
@@ -20,10 +27,11 @@
       }
     }
   }
-  &-label {
+  //DATEPICKER INPUT
+  &-datepicker {
+    display: flex;
     width: 100%;
-    color: $primaty-color;
-    font-size: $medium-font;
-    font-weight: bold;
+    margin: rem-calc(20) 0 rem-calc(20) 0;
+    flex-direction: column;
   }
 }

@@ -27,7 +27,7 @@ const StudentPage = () => {
         <Icon icon="save" />
       </Block>
       <SlidePanel
-        title="test"
+        title={student.button.create}
         icon={ICON_ADD_USER}
         isOpen={panelIsOpen}
         setPanelIsOpen={() => setPanelIsOpen(!panelIsOpen)}
