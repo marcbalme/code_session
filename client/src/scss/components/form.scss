@@ -12,6 +12,13 @@
       font-size: $medium-font;
       font-weight: bold;
     }
+    &.is-empty {
+      > label {
+        > input {
+          border: 2px solid $red;
+        }
+      }
+    }
   }
   &-label {
     width: 100%;

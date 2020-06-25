@@ -3,7 +3,7 @@ import React from 'react';
 
 const Input = (props) => {
   return (
-    <div className="form-input">
+    <div className={`form-input ${props.isEmpty && 'is-empty'}`}>
       <label>
         {props.label}
         <input
@@ -20,6 +20,7 @@ const Input = (props) => {
 Input.defaultProps = {
   label: '',
   placeholder: '',
+  isEmpty: false,
 };
 
 Input.propTypes = {
@@ -29,6 +30,7 @@ Input.propTypes = {
   value: PropTypes.any.isRequired,
   onChange: PropTypes.func.isRequired,
   placeholder: PropTypes.string,
+  isEmpty: PropTypes.bool,
 };
 
 export default Input;
