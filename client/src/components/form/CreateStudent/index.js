@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { student } from '../../../translations';
+import { common, student } from '../../../translations';
 import { api_newStudent } from '../../../api/student/request';
 import Input from '../input';
 import Button from '../../button';
@@ -11,6 +11,7 @@ import {
   LICENCE_AAC,
   VALUE_LICENCE_CS,
   LICENCE_CS,
+  ICON_SAVE,
 } from '../../../constants';
 import InputDatePicker from '../inputDatePicker';
 
@@ -94,22 +95,26 @@ const CreateStudent = () => {
           isEmpty={licenceTypeIsEmpty}
         />
       </div>
-      <div className="column small-6">
+      <div className="column ssmall-12 medium-6">
         <InputDatePicker
           date={birthDate}
           setDate={setBirthDate}
           label={student.birthDate}
         />
       </div>
-      <div className="column small-6">
+      <div className="column small-12 medium-6">
         <InputDatePicker
           date={inscriptionDate}
           setDate={setInscriptionDate}
           label={student.inscriptionDate}
         />
       </div>
-      <div className="column small-6">
-        <Button onClick={() => handleSubmit()} label="submit" />
+      <div className="column small-12 medium-6">
+        <Button
+          onClick={() => handleSubmit()}
+          label={common.save}
+          icon={ICON_SAVE}
+        />
       </div>
     </>
   );
