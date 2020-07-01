@@ -2,11 +2,9 @@ import React, { useState, useEffect } from 'react';
 import Block from '../../block';
 import Button from '../../button';
 import { student } from '../../../translations';
-import Icon from '../../../utils/Icon';
 import { ICON_ADD_USER } from '../../../constants';
 import SlidePanel from '../../slidePanel';
 import CreateStudent from '../../form/CreateStudent';
-import { api_getAllStudent } from '../../../api/student/request';
 import { BDD_URL } from '../../../constants';
 import axios from 'axios';
 
@@ -16,10 +14,12 @@ const StudentPage = () => {
   useEffect(() => {
     async function fetchData() {
       const results = await axios.get(`${BDD_URL}/student`);
-      setStudents(results.data);
+      const data = await results.data;
+      setStudents(data);
     }
     fetchData();
   }, []);
+  console.log(students);
   return (
     <>
       <h1>{student.title}</h1>
@@ -33,10 +33,7 @@ const StudentPage = () => {
           />
         </div>
       </div>
-      <Block title="ceci est un titre">
-        <div>student</div>
-        <Icon icon="save" />
-      </Block>
+      <Block title={student.block_title}></Block>
       <SlidePanel
         title={student.button.create}
         icon={ICON_ADD_USER}
