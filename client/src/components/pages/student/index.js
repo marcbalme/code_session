@@ -7,6 +7,7 @@ import SlidePanel from '../../slidePanel';
 import CreateStudent from '../../form/CreateStudent';
 import { BDD_URL } from '../../../constants';
 import axios from 'axios';
+import StudentTable from '../../table/studentTable';
 
 const StudentPage = () => {
   const [panelIsOpen, setPanelIsOpen] = useState(false);
@@ -33,7 +34,9 @@ const StudentPage = () => {
           />
         </div>
       </div>
-      <Block title={student.block_title}></Block>
+      <Block title={student.block_title}>
+        <StudentTable datas={students} />
+      </Block>
       <SlidePanel
         title={student.button.create}
         icon={ICON_ADD_USER}
