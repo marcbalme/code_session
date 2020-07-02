@@ -1,0 +1,32 @@
+//GLOBAL TABLE STYLE
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: start;
+  vertical-align: middle;
+}
+th {
+  padding: rem-calc(10);
+  font-weight: normal;
+  color: $dark-gray;
+}
+td {
+  padding: rem-calc(10);
+}
+thead {
+  border-bottom: 2px solid $primaty-color;
+  background-color: $white;
+}
+
+tr {
+  &:not(:last-child) {
+    border-bottom: 1px solid $medium-gray;
+  }
+  &:hover {
+    background-color: #c4f6ff;
+  }
+}
