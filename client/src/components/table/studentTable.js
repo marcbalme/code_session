@@ -1,7 +1,7 @@
 import React from 'react';
+import formatDate from '../../utils/formatDate';
 
 const StudentTable = ({ datas }) => {
-  console.log(datas);
   return (
     <table>
       <thead>
@@ -20,7 +20,7 @@ const StudentTable = ({ datas }) => {
             <tr key={i}>
               <td>{data.name}</td>
               <td>{data.firstName}</td>
-              <td>{data.birthDate}</td>
+              <td>{formatDate(data.birthDate)}</td>
               <td>{data.licenceType}</td>
               <td>5</td>
               <td>{data.sessionDones.length}</td>
