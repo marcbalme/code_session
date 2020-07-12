@@ -4,7 +4,7 @@ import licenceTypeName from '../../utils/licenceTypeName';
 
 const StudentTable = ({ datas }) => {
   return (
-    <table>
+    <table className="hide-for-small">
       <thead>
         <tr>
           <th>Nom</th>
