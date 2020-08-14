@@ -23,7 +23,7 @@ const CreateStudent = () => {
   const [licenceType, setLicenceType] = useState(null);
   const [nameIsEmpty, setNameIsEmpty] = useState(false);
   const [firstNameIsEmpty, setFirstNameIsEmpty] = useState(false);
-  const [licenceTypeIsEmpty, setLicenceTypeIsEmpty] = useState(false);
+  const [licenceTypeIsEmpty] = useState(false);
   const selectOptions = [
     { value: VALUE_LICENCE_B, label: LICENCE_B },
     { value: VALUE_LICENCE_AAC, label: LICENCE_AAC },

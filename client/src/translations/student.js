@@ -1,5 +1,6 @@
 const student = {
   title: 'Mes élèves',
+  block_title: 'Liste des élèves',
   button: {
     create: 'Ajouter un élève',
   },
